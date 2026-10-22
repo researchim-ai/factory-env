@@ -1,0 +1,16 @@
+name: Результат бенчмарка
+description: Заявление о сравнении политик
+labels: ["benchmark"]
+body:
+  - type: textarea
+    attributes:
+      label: Условия прогона
+      description: Версия, seeds, split, хеши экземпляров, код репликации. Без этого сравнение не принимается.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Как учтены неуспехи
+      description: Число truncation и deadlock, а не только среднее по удачным эпизодам.
+    validations:
+      required: true

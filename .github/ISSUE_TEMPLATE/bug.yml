@@ -1,0 +1,16 @@
+name: Дефект
+description: Неверное поведение симулятора или среды
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: Что произошло
+      description: Ожидание, факт, версия factoryrl, seed, хеш экземпляра.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Минимальный пример
+      description: Код или YAML, который воспроизводит ошибку.
+    validations:
+      required: true

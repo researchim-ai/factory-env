@@ -1,0 +1,38 @@
+schema_version: 1
+factory:
+  name: demo_jobshop
+  time_unit: minute
+  horizon: 1000
+machines:
+  - id: M1
+    capacity: 1
+  - id: M2
+    capacity: 1
+jobs:
+  - id: J1
+    release_time: 0
+    due_date: 50
+    priority: 1
+    operations:
+      - id: J1-O1
+        machine_id: M1
+        duration: 8
+      - id: J1-O2
+        machine_id: M2
+        duration: 12
+  - id: J2
+    release_time: 0
+    due_date: 65
+    priority: 2
+    operations:
+      - id: J2-O1
+        machine_id: M2
+        duration: 7
+      - id: J2-O2
+        machine_id: M1
+        duration: 15
+environment:
+  id: FactoryRL/JobShop-v0
+  reward: negative_elapsed_time
+  invalid_action_mode: raise
+  allow_voluntary_idle: false

@@ -1,0 +1,16 @@
+name: Изменение
+description: Новая возможность или изменение семантики
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: Задача
+      description: Какой идентификатор требования или ADR это затрагивает.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Совместимость
+      description: Меняются ли наблюдение, награда, порядок событий или идентификатор среды.
+    validations:
+      required: true
